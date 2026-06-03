@@ -6,322 +6,322 @@
 <title>LLM 3대장 유·무료 격차 분석 보고서</title>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-  :root{
-    --font:'Pretendard','Pretendard Variable',system-ui,-apple-system,sans-serif;
-    --bg:#FFFFFF;
-    --ink:#0A0A0A;
-    --muted:#5C5C5C;
-    --line:#0A0A0A;
-    --panel:#F2F2F2;
-    --accent:#2540FF;
-    --accent-ink:#FFFFFF;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    font-family:var(--font);
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.6;
-    font-weight:400;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:920px;margin:0 auto;padding:56px 24px 96px;}
+ :root{
+ --font:'Pretendard','Pretendard Variable',system-ui,-apple-system,sans-serif;
+ --bg:#FFFFFF;
+ --ink:#0A0A0A;
+ --muted:#5C5C5C;
+ --line:#0A0A0A;
+ --panel:#F2F2F2;
+ --accent:#2540FF;
+ --accent-ink:#FFFFFF;
+ }
+ *{margin:0;padding:0;box-sizing:border-box;}
+ html{-webkit-text-size-adjust:100%;}
+ body{
+ font-family:var(--font);
+ color:var(--ink);
+ background:var(--bg);
+ line-height:1.6;
+ font-weight:400;
+ -webkit-font-smoothing:antialiased;
+ }
+ .wrap{max-width:920px;margin:0 auto;padding:56px 24px 96px;}
 
-  /* Header */
-  header{border:3px solid var(--line);padding:32px;margin-bottom:40px;}
-  .kicker{display:inline-block;background:var(--ink);color:#fff;font-weight:700;font-size:12px;letter-spacing:.08em;padding:6px 12px;margin-bottom:18px;}
-  h1{font-weight:900;font-size:34px;line-height:1.18;letter-spacing:-.01em;}
-  .sub{margin-top:14px;font-size:15px;color:var(--muted);max-width:64ch;}
-  .meta{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:24px;font-size:13px;}
-  .meta b{font-weight:700;}
-  .meta span{color:var(--muted);}
+ /* Header */
+ header{border:3px solid var(--line);padding:32px;margin-bottom:40px;}
+ .kicker{display:inline-block;background:var(--ink);color:#fff;font-weight:700;font-size:12px;letter-spacing:.08em;padding:6px 12px;margin-bottom:18px;}
+ h1{font-weight:900;font-size:34px;line-height:1.18;letter-spacing:-.01em;}
+ .sub{margin-top:14px;font-size:15px;color:var(--muted);max-width:64ch;}
+ .meta{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:24px;font-size:13px;}
+ .meta b{font-weight:700;}
+ .meta span{color:var(--muted);}
 
-  /* Section */
-  section{margin-top:48px;}
-  h2{font-weight:900;font-size:22px;letter-spacing:-.01em;padding-bottom:10px;border-bottom:3px solid var(--line);margin-bottom:20px;}
-  h3{font-weight:700;font-size:17px;margin:26px 0 8px;}
-  p{font-size:15px;margin-bottom:12px;}
-  p .em{font-weight:700;}
-  .accent-text{color:var(--accent);font-weight:700;}
+ /* Section */
+ section{margin-top:48px;}
+ h2{font-weight:900;font-size:22px;letter-spacing:-.01em;padding-bottom:10px;border-bottom:3px solid var(--line);margin-bottom:20px;}
+ h3{font-weight:700;font-size:17px;margin:26px 0 8px;}
+ p{font-size:15px;margin-bottom:12px;}
+ p .em{font-weight:700;}
+ .accent-text{color:var(--accent);font-weight:700;}
 
-  /* Summary box */
-  .tldr{background:var(--accent);color:var(--accent-ink);border:3px solid var(--line);padding:28px;}
-  .tldr h2{color:#fff;border-bottom:3px solid #fff;}
-  .tldr p{font-size:16px;font-weight:500;}
-  .tldr .punch{font-size:17px;font-weight:900;line-height:1.55;margin-top:16px;border-top:1px solid rgba(255,255,255,.5);padding-top:16px;}
+ /* Summary box */
+ .tldr{background:var(--accent);color:var(--accent-ink);border:3px solid var(--line);padding:28px;}
+ .tldr h2{color:#fff;border-bottom:3px solid #fff;}
+ .tldr p{font-size:16px;font-weight:500;}
+ .tldr .punch{font-size:17px;font-weight:900;line-height:1.55;margin-top:16px;border-top:1px solid rgba(255,255,255,.5);padding-top:16px;}
 
-  /* Axis cards */
-  .axes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  .axis{border:2px solid var(--line);padding:20px;}
-  .axis .num{display:inline-block;background:var(--ink);color:#fff;font-weight:900;font-size:13px;width:26px;height:26px;line-height:26px;text-align:center;margin-bottom:10px;}
-  .axis h3{margin:0 0 6px;font-size:16px;}
-  .axis p{font-size:14px;color:var(--muted);margin:0;}
+ /* Axis cards */
+ .axes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+ .axis{border:2px solid var(--line);padding:20px;}
+ .axis .num{display:inline-block;background:var(--ink);color:#fff;font-weight:900;font-size:13px;width:26px;height:26px;line-height:26px;text-align:center;margin-bottom:10px;}
+ .axis h3{margin:0 0 6px;font-size:16px;}
+ .axis p{font-size:14px;color:var(--muted);margin:0;}
 
-  /* Table */
-  .table-scroll{overflow-x:auto;border:2px solid var(--line);}
-  table{width:100%;border-collapse:collapse;font-size:14px;min-width:660px;}
-  thead th{background:var(--ink);color:#fff;font-weight:700;text-align:left;padding:12px 14px;font-size:13px;border-right:1px solid #3a3a3a;}
-  thead th:last-child{border-right:none;}
-  tbody th{font-weight:900;text-align:left;padding:14px;background:var(--panel);border-right:2px solid var(--line);border-top:1px solid var(--line);white-space:nowrap;}
-  tbody td{padding:14px;border-right:1px solid var(--line);border-top:1px solid var(--line);vertical-align:top;}
-  tbody td:last-child{border-right:none;}
-  .block{font-weight:700;}
-  .block.cut{color:var(--accent);}
-  .tag{display:inline-block;font-weight:700;font-size:12px;padding:2px 8px;border:1px solid var(--line);}
-  .sm{color:var(--muted);font-size:12.5px;}
+ /* Table */
+ .table-scroll{overflow-x:auto;border:2px solid var(--line);}
+ table{width:100%;border-collapse:collapse;font-size:14px;min-width:660px;}
+ thead th{background:var(--ink);color:#fff;font-weight:700;text-align:left;padding:12px 14px;font-size:13px;border-right:1px solid #3a3a3a;}
+ thead th:last-child{border-right:none;}
+ tbody th{font-weight:900;text-align:left;padding:14px;background:var(--panel);border-right:2px solid var(--line);border-top:1px solid var(--line);white-space:nowrap;}
+ tbody td{padding:14px;border-right:1px solid var(--line);border-top:1px solid var(--line);vertical-align:top;}
+ tbody td:last-child{border-right:none;}
+ .block{font-weight:700;}
+ .block.cut{color:var(--accent);}
+ .tag{display:inline-block;font-weight:700;font-size:12px;padding:2px 8px;border:1px solid var(--line);}
+ .sm{color:var(--muted);font-size:12.5px;}
 
-  /* Feature matrix status */
-  .st{display:inline-block;font-weight:700;font-size:12px;padding:2px 7px;border:1px solid var(--line);white-space:nowrap;}
-  .st-paid{background:var(--accent);color:#fff;border-color:var(--accent);}
-  .st-mix{background:#fff;color:var(--ink);}
-  .st-free{background:var(--ink);color:#fff;}
-  .st-na{background:var(--panel);color:var(--muted);}
-  .legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:12.5px;color:var(--muted);align-items:center;}
-  .legend .st{margin-right:6px;}
+ /* Feature matrix status */
+ .st{display:inline-block;font-weight:700;font-size:12px;padding:2px 7px;border:1px solid var(--line);white-space:nowrap;}
+ .st-paid{background:var(--accent);color:#fff;border-color:var(--accent);}
+ .st-mix{background:#fff;color:var(--ink);}
+ .st-free{background:var(--ink);color:#fff;}
+ .st-na{background:var(--panel);color:var(--muted);}
+ .legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:12.5px;color:var(--muted);align-items:center;}
+ .legend .st{margin-right:6px;}
 
-  /* Provider summary list */
-  .vlist{border:2px solid var(--line);}
-  .vrow{display:grid;grid-template-columns:150px 1fr;border-top:1px solid var(--line);}
-  .vrow:first-child{border-top:none;}
-  .vrow .h{background:var(--panel);font-weight:900;padding:16px;border-right:2px solid var(--line);font-size:15px;}
-  .vrow .b{padding:16px;font-size:14px;}
-  .vrow .b .lead{font-weight:700;}
+ /* Provider summary list */
+ .vlist{border:2px solid var(--line);}
+ .vrow{display:grid;grid-template-columns:150px 1fr;border-top:1px solid var(--line);}
+ .vrow:first-child{border-top:none;}
+ .vrow .h{background:var(--panel);font-weight:900;padding:16px;border-right:2px solid var(--line);font-size:15px;}
+ .vrow .b{padding:16px;font-size:14px;}
+ .vrow .b .lead{font-weight:700;}
 
-  /* Note / sources */
-  .note{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 16px;margin-top:14px;}
-  .sources{margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
-  .sources h2{font-size:16px;border:none;padding:0;margin-bottom:12px;}
-  .sources ol{padding-left:20px;font-size:12.5px;color:var(--muted);}
-  .sources li{margin-bottom:6px;}
+ /* Note / sources */
+ .note{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 16px;margin-top:14px;}
+ .sources{margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+ .sources h2{font-size:16px;border:none;padding:0;margin-bottom:12px;}
+ .sources ol{padding-left:20px;font-size:12.5px;color:var(--muted);}
+ .sources li{margin-bottom:6px;}
 
-  footer{margin-top:48px;border-top:3px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted);}
+ footer{margin-top:48px;border-top:3px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted);}
 
-  @media (max-width:680px){
-    .wrap{padding:32px 16px 64px;}
-    h1{font-size:26px;}
-    .axes{grid-template-columns:1fr;}
-    .vrow{grid-template-columns:1fr;}
-    .vrow .h{border-right:none;border-bottom:1px solid var(--line);}
-  }
-  @media print{
-    body{font-size:12px;}
-    .wrap{padding:0;max-width:none;}
-    .table-scroll{overflow:visible;}
-    table{min-width:0;}
-    .st-paid,.st-free{ -webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  }
+ @media (max-width:680px){
+ .wrap{padding:32px 16px 64px;}
+ h1{font-size:26px;}
+ .axes{grid-template-columns:1fr;}
+ .vrow{grid-template-columns:1fr;}
+ .vrow .h{border-right:none;border-bottom:1px solid var(--line);}
+ }
+ @media print{
+ body{font-size:12px;}
+ .wrap{padding:0;max-width:none;}
+ .table-scroll{overflow:visible;}
+ table{min-width:0;}
+ .st-paid,.st-free{ -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <span class="kicker">LLM 시장 분석 · 2026</span>
-    <h1>LLM 3대장 유·무료 격차 분석</h1>
-    <p class="sub">ChatGPT · Claude · Gemini의 무료 ↔ 유료($20 전후) 격차를 모델 접근 · 사용량 · 기능 세 축으로 분해해 정리한다. 각 사업자가 유료 유인을 어느 지점에 거는지를 비교한다.</p>
-    <div class="meta">
-      <div><b>대상</b> <span>ChatGPT(OpenAI) · Claude(Anthropic) · Gemini(Google)</span></div>
-      <div><b>기준 시점</b> <span>2026년 5–6월</span></div>
-      <div><b>비교 가격대</b> <span>무료 vs 약 $20/월 유료</span></div>
-    </div>
-  </header>
+ <header>
+ <span class="kicker">LLM 시장 분석 · 2026</span>
+ <h1>LLM 3대장 유·무료 격차 분석</h1>
+ <p class="sub">ChatGPT · Claude · Gemini의 무료 ↔ 유료($20 전후) 격차를 모델 접근 · 사용량 · 기능 세 축으로 분해해 정리한다. 각 사업자가 유료 유인을 어느 지점에 거는지를 비교한다.</p>
+ <div class="meta">
+ <div><b>대상</b> <span>ChatGPT(OpenAI) · Claude(Anthropic) · Gemini(Google)</span></div>
+ <div><b>기준 시점</b> <span>2026년 5–6월</span></div>
+ <div><b>비교 가격대</b> <span>무료 vs 약 $20/월 유료</span></div>
+ </div>
+ </header>
 
-  <section>
-    <div class="tldr">
-      <h2>핵심 요약</h2>
-      <p>무료·유료 격차는 단일 지표가 아니라 세 개의 독립된 축으로 나뉜다 — <b>① 어떤 모델을 주는가(모델 접근), ② 그 모델을 얼마나 쓰게 하는가(사용량), ③ 어떤 부가 기능을 여는가(기능)</b>. 세 사업자는 유료 유인을 거는 지점이 서로 다르다.</p>
-      <p class="punch">ChatGPT는 모델·사용량·기능 세 축 모두에서 유료 유인이 가장 강하고, Gemini는 모델·사용량을 가장 관대하게 열되 멀티미디어·생산성 통합을 유료로 차별화하며, Claude는 일상 기능을 무료에 폭넓게 열되 최상위 모델과 전문 워크플로우를 유료에 둔다.</p>
-    </div>
-  </section>
+ <section>
+ <div class="tldr">
+ <h2>핵심 요약</h2>
+ <p>무료·유료 격차는 단일 지표가 아니라 세 개의 독립된 축으로 나뉜다 — <b>① 어떤 모델을 주는가(모델 접근), ② 그 모델을 얼마나 쓰게 하는가(사용량), ③ 어떤 부가 기능을 여는가(기능)</b>. 세 사업자는 유료 유인을 거는 지점이 서로 다르다.</p>
+ <p class="punch">ChatGPT는 모델·사용량·기능 세 축 모두에서 유료 유인이 가장 강하고, Gemini는 모델·사용량을 가장 관대하게 열되 멀티미디어·생산성 통합을 유료로 차별화하며, Claude는 일상 기능을 무료에 폭넓게 열되 최상위 모델과 전문 워크플로우를 유료에 둔다.</p>
+ </div>
+ </section>
 
-  <section>
-    <h2>분석 프레임: 세 개의 축</h2>
-    <div class="axes">
-      <div class="axis">
-        <span class="num">1</span>
-        <h3>모델 접근</h3>
-        <p>무료 사용자가 그 서비스의 플래그십(최상위) 모델을 쓸 수 있는가, 차단되는가.</p>
-      </div>
-      <div class="axis">
-        <span class="num">2</span>
-        <h3>사용량 스로틀링</h3>
-        <p>비슷한 모델을 무료 대비 유료가 몇 배 더 쓰게 하는가. 한도 초과 시 강등 여부.</p>
-      </div>
-      <div class="axis">
-        <span class="num">3</span>
-        <h3>기능 차이</h3>
-        <p>음성·영상·딥리서치·에이전트 등 부가 기능이 무료/유료 어디에 배치되는가.</p>
-      </div>
-    </div>
-  </section>
+ <section>
+ <h2>분석 프레임: 세 개의 축</h2>
+ <div class="axes">
+ <div class="axis">
+ <span class="num">1</span>
+ <h3>모델 접근</h3>
+ <p>무료 사용자가 그 서비스의 플래그십(최상위) 모델을 쓸 수 있는가, 차단되는가.</p>
+ </div>
+ <div class="axis">
+ <span class="num">2</span>
+ <h3>사용량 스로틀링</h3>
+ <p>비슷한 모델을 무료 대비 유료가 몇 배 더 쓰게 하는가. 한도 초과 시 강등 여부.</p>
+ </div>
+ <div class="axis">
+ <span class="num">3</span>
+ <h3>기능 차이</h3>
+ <p>음성·영상·딥리서치·에이전트 등 부가 기능이 무료/유료 어디에 배치되는가.</p>
+ </div>
+ </div>
+ </section>
 
-  <section>
-    <h2>축 1·2 — 모델 접근과 사용량</h2>
-    <div class="table-scroll">
-      <table>
-        <thead>
-          <tr>
-            <th>서비스</th>
-            <th>무료 기본 모델</th>
-            <th>유료($20) 플래그십</th>
-            <th>무료의 플래그십 접근</th>
-            <th>사용량 배수(유료/무료)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>ChatGPT</th>
-            <td>GPT-5.3 Instant<br><span class="sm">한도 초과 시 5.3 mini로 강등</span></td>
-            <td>GPT-5.5 / 5.5 Thinking</td>
-            <td><span class="block cut">완전 차단</span><br><span class="sm">5.5 계열 불가</span></td>
-            <td><span class="tag">약 10배+</span><br><span class="sm">무료 ~10–15msg/3–5h → Plus 160msg/3h</span></td>
-          </tr>
-          <tr>
-            <th>Claude</th>
-            <td>Sonnet 4.6–4.7</td>
-            <td>Opus 4.7–4.8</td>
-            <td><span class="block cut">완전 차단</span><br><span class="sm">Opus 불가</span></td>
-            <td><span class="tag">약 5배</span></td>
-          </tr>
-          <tr>
-            <th>Gemini</th>
-            <td>Gemini 3 Flash</td>
-            <td>Gemini 3 Pro</td>
-            <td><span class="block">제한적 허용</span><br><span class="sm">3 Pro 하루 소수 프롬프트</span></td>
-            <td><span class="tag">약 4배</span><br><span class="sm">AI Pro = 무료의 4×</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">모델 접근: GPT·Claude는 무료를 플래그십에서 완전히 차단, Gemini만 소량 허용. 사용량: GPT(10배+) &gt; Claude(5배) &gt; Gemini(4배) 순으로 절벽이 가파르다. 단, 동일 모델을 쓸 경우 무료/유료 출력 품질은 동일하며, 차이는 처리량·가용성이지 모델 자체의 우열이 아니다.</p>
-  </section>
+ <section>
+ <h2>축 1·2 — 모델 접근과 사용량</h2>
+ <div class="table-scroll">
+ <table>
+ <thead>
+ <tr>
+ <th>서비스</th>
+ <th>무료 기본 모델</th>
+ <th>유료($20) 플래그십</th>
+ <th>무료의 플래그십 접근</th>
+ <th>사용량 배수(유료/무료)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <th>ChatGPT</th>
+ <td>GPT-5.3 Instant<br><span class="sm">한도 초과 시 5.3 mini로 강등</span></td>
+ <td>GPT-5.5 / 5.5 Thinking</td>
+ <td><span class="block cut">완전 차단</span><br><span class="sm">5.5 계열 불가</span></td>
+ <td><span class="tag">약 10배+</span><br><span class="sm">무료 ~10–15msg/3–5h → Plus 160msg/3h</span></td>
+ </tr>
+ <tr>
+ <th>Claude</th>
+ <td>Sonnet 4.6–4.7</td>
+ <td>Opus 4.7–4.8</td>
+ <td><span class="block cut">완전 차단</span><br><span class="sm">Opus 불가</span></td>
+ <td><span class="tag">약 5배</span></td>
+ </tr>
+ <tr>
+ <th>Gemini</th>
+ <td>Gemini 3 Flash</td>
+ <td>Gemini 3 Pro</td>
+ <td><span class="block">제한적 허용</span><br><span class="sm">3 Pro 하루 소수 프롬프트</span></td>
+ <td><span class="tag">약 4배</span><br><span class="sm">AI Pro = 무료의 4×</span></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <p class="note">모델 접근: GPT·Claude는 무료를 플래그십에서 완전히 차단, Gemini만 소량 허용. 사용량: GPT(10배+) &gt; Claude(5배) &gt; Gemini(4배) 순으로 절벽이 가파르다. 단, 동일 모델을 쓸 경우 무료/유료 출력 품질은 동일하며, 차이는 처리량·가용성이지 모델 자체의 우열이 아니다.</p>
+ </section>
 
-  <section>
-    <h2>축 3 — 기능 차이 매트릭스</h2>
-    <div class="table-scroll">
-      <table>
-        <thead>
-          <tr>
-            <th>기능</th>
-            <th>ChatGPT</th>
-            <th>Claude</th>
-            <th>Gemini</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>플래그십 모델</th>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">GPT-5.5</span></td>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">Opus</span></td>
-            <td><span class="st st-mix">무료 소량·유료 확대</span><br><span class="sm">3 Pro</span></td>
-          </tr>
-          <tr>
-            <th>딥리서치</th>
-            <td><span class="st st-mix">무료 제한·유료 확대</span><br><span class="sm">무료 5/월 → 유료 ~10–25</span></td>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">Research</span></td>
-            <td><span class="st st-mix">무료 제한·유료 확대</span><br><span class="sm">무료 5/월 → 유료 20/일</span></td>
-          </tr>
-          <tr>
-            <th>고급 음성</th>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">Advanced Voice (실시간·비전)</span></td>
-            <td><span class="st st-na">해당 없음</span></td>
-            <td><span class="st st-mix">무료 일부</span><br><span class="sm">Gemini Live</span></td>
-          </tr>
-          <tr>
-            <th>이미지 생성</th>
-            <td><span class="st st-mix">무료 소량·유료 확대</span></td>
-            <td><span class="st st-na">해당 없음</span></td>
-            <td><span class="st st-mix">무료 100/일·유료 1,000/일</span><br><span class="sm">Nano Banana</span></td>
-          </tr>
-          <tr>
-            <th>영상 생성</th>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">Sora 2 · 무료 접근 2026.1 중단</span></td>
-            <td><span class="st st-na">해당 없음</span></td>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">Veo 3.1</span></td>
-          </tr>
-          <tr>
-            <th>커스텀 봇</th>
-            <td><span class="st st-mix">사용 무료·생성 유료</span><br><span class="sm">Custom GPT</span></td>
-            <td><span class="st st-free">무료 제공</span><br><span class="sm">Projects</span></td>
-            <td><span class="st st-free">무료 제공</span><br><span class="sm">Gems</span></td>
-          </tr>
-          <tr>
-            <th>에이전트·코딩</th>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">Agent·Codex</span></td>
-            <td><span class="st st-paid">유료 전용</span><br><span class="sm">Claude Code·Cowork</span></td>
-            <td><span class="st st-mix">일부 유료</span><br><span class="sm">예약 실행 등</span></td>
-          </tr>
-          <tr>
-            <th>메모리</th>
-            <td><span class="st st-mix">무료 제한·유료 확대</span></td>
-            <td><span class="st st-free">무료 제공</span></td>
-            <td><span class="st st-free">무료 제공</span></td>
-          </tr>
-          <tr>
-            <th>데이터 학습 옵트아웃</th>
-            <td><span class="st st-paid">유료</span></td>
-            <td><span class="st st-paid">유료</span></td>
-            <td><span class="st st-paid">유료</span></td>
-          </tr>
-          <tr>
-            <th>우선 접근</th>
-            <td><span class="st st-paid">유료</span></td>
-            <td><span class="st st-paid">유료</span></td>
-            <td><span class="st st-paid">유료</span></td>
-          </tr>
-          <tr>
-            <th>광고 제거</th>
-            <td><span class="st st-paid">유료</span><br><span class="sm">무료는 미국 등 광고</span></td>
-            <td><span class="st st-free">광고 없음</span></td>
-            <td><span class="st st-free">광고 없음</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="legend">
-      <span><span class="st st-paid">유료 전용</span> 무료 차단</span>
-      <span><span class="st st-mix">무료 제한·유료 확대</span> 무료 일부+유료 강화</span>
-      <span><span class="st st-free">무료 제공</span> 무료도 충분</span>
-      <span><span class="st st-na">해당 없음</span> 미지원</span>
-    </div>
-    <p class="note">공통적으로 딥리서치 확대·우선 접근·데이터 학습 옵트아웃은 세 사업자 모두 유료 영역이다. 차별점은 멀티미디어 생성(영상·이미지)과 에이전트형 도구를 어느 강도로 유료에 묶느냐에 있다. 참고로 ChatGPT의 Sora 영상 생성은 2026년 1월 무료 접근이 중단돼 사실상 유료 전용이며, 일부 지역에서 480p·소량의 제한적 무료 시도가 보고되나 안정적 기능은 아니다.</p>
-  </section>
+ <section>
+ <h2>축 3 — 기능 차이 매트릭스</h2>
+ <div class="table-scroll">
+ <table>
+ <thead>
+ <tr>
+ <th>기능</th>
+ <th>ChatGPT</th>
+ <th>Claude</th>
+ <th>Gemini</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <th>플래그십 모델</th>
+ <td><span class="st st-paid">유료 전용</span><br><span class="sm">GPT-5.5</span></td>
+ <td><span class="st st-paid">유료 전용</span><br><span class="sm">Opus</span></td>
+ <td><span class="st st-mix">무료 소량·유료 확대</span><br><span class="sm">3 Pro</span></td>
+ </tr>
+ <tr>
+ <th>딥리서치</th>
+ <td><span class="st st-mix">무료 제한·유료 확대</span><br><span class="sm">무료 5/월 → 유료 ~10–25</span></td>
+ <td><span class="st st-paid">유료 전용</span><br><span class="sm">Research</span></td>
+ <td><span class="st st-mix">무료 제한·유료 확대</span><br><span class="sm">무료 5/월 → 유료 20/일</span></td>
+ </tr>
+ <tr>
+ <th>고급 음성</th>
+ <td><span class="st st-paid">유료 전용</span><br><span class="sm">Advanced Voice (실시간·비전)</span></td>
+ <td><span class="st st-na">해당 없음</span></td>
+ <td><span class="st st-mix">무료 일부</span><br><span class="sm">Gemini Live</span></td>
+ </tr>
+ <tr>
+ <th>이미지 생성</th>
+ <td><span class="st st-mix">무료 소량·유료 확대</span></td>
+ <td><span class="st st-na">해당 없음</span></td>
+ <td><span class="st st-mix">무료 100/일·유료 1,000/일</span><br><span class="sm">Nano Banana</span></td>
+ </tr>
+ <tr>
+ <th>영상 생성</th>
+ <td><span class="st st-na">지원 종료</span><br><span class="sm">Sora 2026.4 서비스 종료</span></td>
+ <td><span class="st st-na">해당 없음</span></td>
+ <td><span class="st st-paid">유료 전용</span><br><span class="sm">Veo 3.1</span></td>
+ </tr>
+ <tr>
+ <th>커스텀 봇</th>
+ <td><span class="st st-mix">사용 무료·생성 유료</span><br><span class="sm">Custom GPT</span></td>
+ <td><span class="st st-free">무료 제공</span><br><span class="sm">Projects</span></td>
+ <td><span class="st st-free">무료 제공</span><br><span class="sm">Gems</span></td>
+ </tr>
+ <tr>
+ <th>에이전트·코딩</th>
+ <td><span class="st st-paid">유료 전용</span><br><span class="sm">Agent·Codex</span></td>
+ <td><span class="st st-paid">유료 전용</span><br><span class="sm">Claude Code·Cowork</span></td>
+ <td><span class="st st-mix">일부 유료</span><br><span class="sm">예약 실행 등</span></td>
+ </tr>
+ <tr>
+ <th>메모리</th>
+ <td><span class="st st-mix">무료 제한·유료 확대</span></td>
+ <td><span class="st st-free">무료 제공</span></td>
+ <td><span class="st st-free">무료 제공</span></td>
+ </tr>
+ <tr>
+ <th>데이터 학습 옵트아웃</th>
+ <td><span class="st st-paid">유료</span></td>
+ <td><span class="st st-paid">유료</span></td>
+ <td><span class="st st-paid">유료</span></td>
+ </tr>
+ <tr>
+ <th>우선 접근</th>
+ <td><span class="st st-paid">유료</span></td>
+ <td><span class="st st-paid">유료</span></td>
+ <td><span class="st st-paid">유료</span></td>
+ </tr>
+ <tr>
+ <th>광고 제거</th>
+ <td><span class="st st-paid">유료</span><br><span class="sm">무료는 미국 등 광고</span></td>
+ <td><span class="st st-free">광고 없음</span></td>
+ <td><span class="st st-free">광고 없음</span></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <div class="legend">
+ <span><span class="st st-paid">유료 전용</span> 무료 차단</span>
+ <span><span class="st st-mix">무료 제한·유료 확대</span> 무료 일부+유료 강화</span>
+ <span><span class="st st-free">무료 제공</span> 무료도 충분</span>
+ <span><span class="st st-na">해당 없음</span> 미지원</span>
+ </div>
+ <p class="note">공통적으로 딥리서치 확대·우선 접근·데이터 학습 옵트아웃은 세 사업자 모두 유료 영역이다. 차별점은 멀티미디어 생성(영상·이미지)과 에이전트형 도구를 어느 강도로 유료에 묶느냐에 있다. 단, ChatGPT의 영상 생성(Sora)은 2026년 3월 종료 발표 후 웹·앱 및 ChatGPT 내 영상 기능이 4월 26일 종료됐고 API도 9월 24일 종료 예정이라, 현재 소비자용 영상 생성은 제공되지 않는다. 결과적으로 영상 생성을 제공하는 곳은 Gemini(Veo, 유료)뿐이다.</p>
+ </section>
 
-  <section>
-    <h2>사업자별 격차 구조</h2>
-    <div class="vlist">
-      <div class="vrow">
-        <div class="h">ChatGPT</div>
-        <div class="b"><span class="lead">세 축 모두 유료 유인 최강.</span> 플래그십(5.5) 완전 차단, 사용량 절벽 약 10배+(mini 강등), 그리고 고급 음성·Sora 영상·Agent·Codex·Custom GPT 생성·딥리서치 확대 등 부가 기능 다수를 유료에 배치. 무료엔 광고까지 도입. 일상 질의는 무료로 충분하나 "전문 워크플로우"는 사실상 유료 전제.</div>
-      </div>
-      <div class="vrow">
-        <div class="h">Claude</div>
-        <div class="b"><span class="lead">모델·전문 도구 중심 차별화, 일상 기능은 관대.</span> Opus는 유료 전용이나 무료 기본인 Sonnet 자체가 강하고, 2026.2 확장으로 Projects·Artifacts·웹검색·파일 업로드·메모리를 무료에 개방. 유료 차별화는 주로 Opus + Claude Code·Cowork·Research + 데이터 학습 옵트아웃에 집중. 음성·이미지·영상 생성은 미지원이라 멀티미디어 축 자체가 비어 있음.</div>
-      </div>
-      <div class="vrow">
-        <div class="h">Gemini</div>
-        <div class="b"><span class="lead">텍스트 기본기는 개방, 멀티미디어·통합을 유료화.</span> 모델 접근(무료도 3 Pro 소량)과 사용량 배수(4배) 모두 가장 완만. 대신 Veo 영상 생성, Nano Banana 대량 이미지, 딥리서치 폭증(5/월→20/일), Workspace 통합·저장공간(15GB→2TB)을 유료 유인으로 삼음. Google 생태계 통합이 유료 가치의 핵심.</div>
-      </div>
-    </div>
-    <p style="margin-top:20px;font-weight:700;font-size:16px;">요약하면, 세 사업자는 같은 "$20 유료" 가격대에서 격차의 무게중심을 서로 다른 축에 둔다 — <span class="accent-text">ChatGPT는 기능·사용량 전방위, Gemini는 멀티미디어·생태계, Claude는 최상위 모델·전문 워크플로우.</span></p>
-  </section>
+ <section>
+ <h2>사업자별 격차 구조</h2>
+ <div class="vlist">
+ <div class="vrow">
+ <div class="h">ChatGPT</div>
+ <div class="b"><span class="lead">세 축 모두 유료 유인 최강.</span> 플래그십(5.5) 완전 차단, 사용량 절벽 약 10배+(mini 강등), 그리고 고급 음성·Agent·Codex·Custom GPT 생성·딥리서치 확대 등 부가 기능 다수를 유료에 배치. 무료엔 광고까지 도입. 단 영상 생성(Sora)은 2026년 4월 종료돼 더 이상 제공되지 않는다. 일상 질의는 무료로 충분하나 "전문 워크플로우"는 사실상 유료 전제.</div>
+ </div>
+ <div class="vrow">
+ <div class="h">Claude</div>
+ <div class="b"><span class="lead">모델·전문 도구 중심 차별화, 일상 기능은 관대.</span> Opus는 유료 전용이나 무료 기본인 Sonnet 자체가 강하고, 2026.2 확장으로 Projects·Artifacts·웹검색·파일 업로드·메모리를 무료에 개방. 유료 차별화는 주로 Opus + Claude Code·Cowork·Research + 데이터 학습 옵트아웃에 집중. 음성·이미지·영상 생성은 미지원이라 멀티미디어 축 자체가 비어 있음.</div>
+ </div>
+ <div class="vrow">
+ <div class="h">Gemini</div>
+ <div class="b"><span class="lead">텍스트 기본기는 개방, 멀티미디어·통합을 유료화.</span> 모델 접근(무료도 3 Pro 소량)과 사용량 배수(4배) 모두 가장 완만. 대신 Veo 영상 생성, Nano Banana 대량 이미지, 딥리서치 폭증(5/월→20/일), Workspace 통합·저장공간(15GB→2TB)을 유료 유인으로 삼음. Google 생태계 통합이 유료 가치의 핵심.</div>
+ </div>
+ </div>
+ <p style="margin-top:20px;font-weight:700;font-size:16px;">요약하면, 세 사업자는 같은 "$20 유료" 가격대에서 격차의 무게중심을 서로 다른 축에 둔다 — <span class="accent-text">ChatGPT는 기능·사용량 전방위, Gemini는 멀티미디어·생태계, Claude는 최상위 모델·전문 워크플로우.</span></p>
+ </section>
 
-  <div class="sources">
-    <h2>데이터 출처</h2>
-    <ol>
-      <li>ChatGPT 무료/Plus 모델·한도·기능: OpenAIToolsHub, ClickRank, CometAPI, Neuronad, Dupple, nexos.ai (2026.3–5)</li>
-      <li>Claude 무료/Pro 모델·한도·기능: FreeAcademy, Dupple, daehnhardt.com, Verdent Guides (2026.2–5)</li>
-      <li>Gemini 무료/AI Pro 모델·한도·기능: 9to5Google, Yahoo Tech, Finout, TechCrunch (2026.1–5)</li>
-      <li>동일 모델 품질 동일성·모델 가용성: YingTu, TokenMix (2026.2–4)</li>
-      <li>Sora 무료 접근 중단(2026.1): Apiyi, Flowith, veo3ai, Cliprise (2026.1–5)</li>
-    </ol>
-    <p class="note" style="margin-top:14px">모델 버전·가격·한도·기능은 매우 빠르게 변한다. 본 보고서는 2026년 5–6월 시점의 공개 자료 종합이며, 수치가 출처별로 다른 항목(예: 딥리서치 유료 한도)은 범위로 표기했다. 최종 확인은 각 서비스 공식 가격 페이지를 권한다.</p>
-  </div>
+ <div class="sources">
+ <h2>데이터 출처</h2>
+ <ol>
+ <li>ChatGPT 무료/Plus 모델·한도·기능: OpenAIToolsHub, ClickRank, CometAPI, Neuronad, Dupple, nexos.ai (2026.3–5)</li>
+ <li>Claude 무료/Pro 모델·한도·기능: FreeAcademy, Dupple, daehnhardt.com, Verdent Guides (2026.2–5)</li>
+ <li>Gemini 무료/AI Pro 모델·한도·기능: 9to5Google, Yahoo Tech, Finout, TechCrunch (2026.1–5)</li>
+ <li>동일 모델 품질 동일성·모델 가용성: YingTu, TokenMix (2026.2–4)</li>
+ <li>Sora 서비스 종료(웹·앱 2026.4.26 · API 2026.9.24): OpenAI Help Center, WSJ 보도, AOL (2026.3–4)</li>
+ </ol>
+ <p class="note" style="margin-top:14px">모델 버전·가격·한도·기능은 매우 빠르게 변한다. 본 보고서는 2026년 5–6월 시점의 공개 자료 종합이며, 수치가 출처별로 다른 항목(예: 딥리서치 유료 한도)은 범위로 표기했다. 최종 확인은 각 서비스 공식 가격 페이지를 권한다.</p>
+ </div>
 
-  <footer>
-    LLM 3대장 유·무료 격차 분석 보고서 · 2026년 6월 작성 · 무료 vs 약 $20 유료 기준 · 모델 접근·사용량·기능 3축 분석
-  </footer>
+ <footer>
+ LLM 3대장 유·무료 격차 분석 보고서 · 2026년 6월 작성 · 무료 vs 약 $20 유료 기준 · 모델 접근·사용량·기능 3축 분석
+ </footer>
 
 </div>
 </body>
